@@ -23,7 +23,7 @@ int main(void)
 	for(;;nanosleep(&delay, NULL))
 	{
 		printf("z\n");
+		XWarpPointer(disp, None, RootWindow(disp, DefaultScreen(disp)), 0, 0, 0, 0, 10, 10);
+		XFlush(disp);
 	}
-	XWarpPointer(disp, None, RootWindow(disp, DefaultScreen(disp)), 0, 0, 0, 0, 100, 100);
-	XFlush(disp);
 }
